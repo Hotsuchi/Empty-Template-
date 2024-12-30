@@ -48,21 +48,74 @@ html,body{
 
 /* Theme */
 
+:root {
+    --main: hsla(167, 77%, 35%, 1);
+    --support: hsla(214, 100%, 34%, 1);
+    --btn-hover: hsla(167, 77%, 20%, 2);
+
+    --heading: hsla(217, 2%, 10%, 1);
+    --sub-heading: hsla(217, 4%, 30%, 1);
+    --para: hsla(217, 6%, 50%, 1);
+    --bdr-shadow-col: hsla(217, 8%, 80%, 1);
+    --soft-bg: hsla(217, 10%, 90%, 1);
+
+    --bdr: .1rem solid var(--bdr-shadow-col);
+    --bx-shadow: var(--bdr-shadow-col) 0px 7px 10px 1px;
+}
+
 /* End Theme */
 /* ========== Common ========== */
 
-button{
-    box-shadow: var(--box-shadow);
-    background: var(--btn-bg-col);
-    color: var(--white-col);
-    font-family: var(--menu-font);
+h2{
     text-transform: capitalize;
+    color: var(--heading);
+}
+h3,h4,h5{
+    text-transform: capitalize;
+    color: var(--sub-heading);
+}
+p{
+    color: var(--para);
+    font-size: .9rem;
+}
+button{
+    text-transform: capitalize;
+    background: none;
     font-weight: bolder;
-    padding: .5rem 2rem;
-    border-radius: .3rem;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    border: var(--bdr);
+    color: var(--main);
 }
 button:hover{
-    background: var(--btn-hover-bg-col);
+    background: var(--main);
+    color: #fff;
+    box-shadow: var(--bx-shadow);
+}
+.btn-bg{
+    background: var(--main);
+    color: #fff;
+    border: none;
+}
+.btn-bg:hover{
+    background: var(--btn-hover);
+}
+a{
+    text-transform: capitalize;
+    font-weight: bolder;
+    color: var(--main);
+    border-radius: 1rem;
+    margin-left: 2rem;
+}
+input[type="text"]{
+    padding: .5rem 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    border: var(--bdr);
+}
+input[type="text"]:hover{
+    box-shadow: var(--bx-shadow);
 }
 
 /* ========= End Common =========*/
+
